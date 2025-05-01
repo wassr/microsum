@@ -1,0 +1,13 @@
+/*
+ * Copyright (c) 2025 Noel Atzwanger
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of
+ * the MPL was not distributed with this file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
+/*
+ * This file is generated from config.h.in by Meson. Do not include this file directly unless you
+ * know what you're doing. It is used internally to control feature selection at build time.
+ */
+
+#pragma once
