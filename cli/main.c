@@ -5,14 +5,11 @@
  * the MPL was not distributed with this file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
+#include <microsum/core.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-#include <microsum/core.h>
-
-int
-main(int argc, char* argv[])
-{
+int main(int argc, char* argv[]) {
     printf("Hello, World! (v%s)\n", msum_version());
     return EXIT_SUCCESS;
 }

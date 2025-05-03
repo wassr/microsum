@@ -5,7 +5,6 @@
  * the MPL was not distributed with this file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-char* msum_version()
-{
+char* msum_version() {
     return "0.0.0";
 }

@@ -21,27 +21,27 @@
 #define MSUM_STATIC static
 
 #if defined _WIN32 || defined __CYGWIN__
-  #ifdef MSUM_BUILDING
-    #ifdef __GNUC__
-      #define MSUM_PUBLIC __attribute__ ((dllexport))
+    #ifdef MSUM_BUILDING
+        #ifdef __GNUC__
+            #define MSUM_PUBLIC __attribute__((dllexport))
+        #else
+            #define MSUM_PUBLIC __declspec(dllexport)
+        #endif
     #else
-      #define MSUM_PUBLIC __declspec(dllexport)
+        #ifdef __GNUC__
+            #define MSUM_PUBLIC __attribute__((dllimport))
+        #else
+            #define MSUM_PUBLIC __declspec(dllimport)
+        #endif
     #endif
-  #else
-    #ifdef __GNUC__
-      #define MSUM_PUBLIC __attribute__ ((dllimport))
-    #else
-      #define MSUM_PUBLIC __declspec(dllimport)
-    #endif
-  #endif
-  #define MSUM_PRIVATE
-#else
-  #if __GNUC__ >= 4
-    #define MSUM_PUBLIC __attribute__ ((visibility ("default")))
-    #define MSUM_PRIVATE __attribute__ ((visibility ("hidden")))
-  #else
-    #warning unknown compiler type, cannot set visablity
-    #define MSUM_PUBLIC
     #define MSUM_PRIVATE
-  #endif
+#else
+    #if __GNUC__ >= 4
+        #define MSUM_PUBLIC  __attribute__((visibility("default")))
+        #define MSUM_PRIVATE __attribute__((visibility("hidden")))
+    #else
+        #warning unknown compiler type, cannot set visablity
+        #define MSUM_PUBLIC
+        #define MSUM_PRIVATE
+    #endif
 #endif
