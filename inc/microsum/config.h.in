@@ -11,3 +11,11 @@
  */
 
 #pragma once
+
+// General info about the library
+#define MSUM_BUILD_VER    "@version@"
+#define MSUM_BUILD_COMMIT "@git-commit@"
+#define MSUM_BUILD_DATE   "@date@"
+
+#define MSUM_BUILD_CC_ID  "@cc-id@"
+#define MSUM_BUILD_CC_VER "@cc-ver@"

@@ -1,0 +1,30 @@
+option(
+    'build-static',
+    type: 'boolean',
+    value: true,
+    description: 'build a static libmicrosum',
+)
+option(
+    'build-static-pic',
+    type: 'boolean',
+    value: false,
+    description: 'build the static library with pic enabled',
+)
+option(
+    'build-shared',
+    type: 'boolean',
+    value: true,
+    description: 'build a shared libmicrosum',
+)
+option(
+    'build-cli',
+    type: 'boolean',
+    value: true,
+    description: 'build the cli program (usum)',
+)
+option(
+    'cli-link-type',
+    type: 'combo',
+    choices: ['shared', 'static'],
+    value: 'static',
+)

@@ -1,3 +1,3 @@
 subdir('microsum')
 
-include_dir = include_directories('.')
+lib_include_dir = include_directories('.')
