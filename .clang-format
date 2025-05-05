@@ -1,16 +1,15 @@
 ---
 BasedOnStyle: Mozilla
 AlignArrayOfStructures: Right
-AlignConsecutiveAssignments:
-  AcrossEmptyLines: true
-AlignConsecutiveBitFields:
-  Enabled: true
-AlignConsecutiveDeclarations:
-  Enabled: true
-AlignConsecutiveMacros:
-  Enabled: true
+AlignConsecutiveAssignments: Consecutive
+AlignConsecutiveBitFields: Consecutive
+AlignConsecutiveDeclarations: Consecutive
+AlignConsecutiveMacros: Consecutive
 AlignConsecutiveShortCaseStatements:
   Enabled: true
+  AcrossEmptyLines: true
+  AcrossComments: true
+  AlignCaseColons: false
 AlignOperands: AlignAfterOperator
 AllowShortBlocksOnASingleLine: Always
 AllowShortCaseLabelsOnASingleLine: true
@@ -40,10 +39,10 @@ QualifierAlignment: Left
 RemoveParentheses: MultipleParentheses
 SeparateDefinitionBlocks: Always
 SpacesInLineCommentPrefix:
+  Minimum: 1
   Maximum: 1
 TabWidth: 4
 WhitespaceSensitiveMacros:
   - STRINGIZE
 Language: Cpp
-...
 
