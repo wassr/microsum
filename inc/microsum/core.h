@@ -9,5 +9,8 @@
 
 #include <microsum/macros.h>
 
-MSUM_PUBLIC const char* msum_version();
-MSUM_PUBLIC const char* msum_info();
+MSUM_PUBLIC const char* msum_version(void);
+MSUM_PUBLIC const int   msum_version_minor(void);
+MSUM_PUBLIC const int   msum_version_major(void);
+
+MSUM_PUBLIC const char* msum_info(void);

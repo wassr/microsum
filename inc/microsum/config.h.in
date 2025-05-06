@@ -12,8 +12,13 @@
 
 #pragma once
 
+// clang-format off
+
 // General info about the library
-#define MSUM_BUILD_VER    "@version@"
+#define MSUM_VER_STR      "@version@"
+#define MSUM_VER_MAJOR    @version-major@ 
+#define MSUM_VER_MINOR    @version-minor@
+
 #define MSUM_BUILD_COMMIT "@git-commit@"
 #define MSUM_BUILD_DATE   "@date@"
 

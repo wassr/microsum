@@ -1,6 +1,8 @@
 config = configuration_data()
 
 config.set('version', meson.project_version())
+config.set('version-major', meson.project_version().split('.')[0])
+config.set('version-minor', meson.project_version().split('.')[0])
 src_root = meson.project_source_root()
 commit = run_command(src_root / 'scripts' / 'commit.py', src_root, check: true).stdout()
 config.set('git-commit', commit)

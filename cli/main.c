@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, char *argv[]) {
-  printf("Hello, World! (v%s)\n", msum_version());
-  return EXIT_SUCCESS;
+int main(int argc, char* argv[]) {
+    printf("%s\n", msum_info());
+    return EXIT_SUCCESS;
 }
