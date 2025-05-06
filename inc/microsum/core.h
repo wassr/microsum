@@ -7,4 +7,7 @@
 
 #pragma once
 
-char* msum_version();
+#include <microsum/macros.h>
+
+MSUM_PUBLIC const char* msum_version();
+MSUM_PUBLIC const char* msum_info();

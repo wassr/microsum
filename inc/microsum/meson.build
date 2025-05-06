@@ -1,3 +1,5 @@
+config = configuration_data()
+
 config.set('version', meson.project_version())
 src_root = meson.project_source_root()
 commit = run_command(src_root / 'scripts' / 'commit.py', src_root, check: true).stdout()

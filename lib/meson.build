@@ -7,10 +7,15 @@ if get_option('build-static')
         sources: lib_srcs,
         include_directories: lib_include_dir,
         install: true,
+        c_args: '-DMSUM_STATIC',
         pic: get_option('build-static-pic'),
     )
     libs += lib_static
-    lib_static_dep = declare_dependency(include_directories: lib_include_dir, link_with: lib_static)
+    lib_static_dep = declare_dependency(
+        include_directories: lib_include_dir,
+        link_with: lib_static,
+        compile_args: '-DMSUM_STATIC',
+    )
     if get_option('cli-link-type') == 'static'
         cli_dep = lib_static_dep
     endif
@@ -33,11 +38,3 @@ if get_option('build-shared')
 else
     message('Not building shared libmicrosum')
 endif
-
-pkgconfig = import('pkgconfig')
-pkgconfig.generate(
-    libs[0],
-    name: 'microsum',
-    version: meson.project_version(),
-    description: 'Portable, lightweight checksum and hash library in C',
-)

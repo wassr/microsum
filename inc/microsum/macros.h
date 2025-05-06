@@ -11,14 +11,10 @@
  * The following sets the macros:
  *  - MSUM_PUBLIC
  *  - MSUM_PRIVATE
- *  - MSUM_STATIC
- * Setting MSUM_STATIC is straightforward as nearly all compilers respect the static keyword.
- * However, MSVC and CLANG/GCC have different ways to do this. If it cannot detect either of
- * those two, it will not make any annotations.
- *
+ * Hiding function in an build object is easy with static as its universally available. However 
+ * library wide symbol visabily is more complicated as MSVC and CLANG/GCC have different ways to 
+ * do this. If it cannot detect either of those two, it will not make any annotations.
  */
-
-#define MSUM_STATIC static
 
 #if defined _WIN32 || defined __CYGWIN__
     #ifdef MSUM_BUILDING
@@ -44,4 +40,10 @@
         #define MSUM_PUBLIC
         #define MSUM_PRIVATE
     #endif
+#endif
+
+
+// sanity check that either MSUM_SHARED xor MSUM_STATIC is used
+#ifndef MSUM_STATIC
+    #define MSUM_SHARED
 #endif

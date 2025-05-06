@@ -1,0 +1,10 @@
+prefix=@prefix@
+includedir=${prefix}/@includedir@
+libdir=${prefix}/@libdir@
+
+Name: microsum
+Description: Portable, lightweight checksum and hash library in C
+Version: @version@
+Libs: -L${libdir} -lmicrosum
+Cflags: -I${includedir}
+Cflags.private: -DMSUM_STATIC
