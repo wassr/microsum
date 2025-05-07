@@ -1,4 +1,4 @@
-lib_srcs = ['core.c', 'query.c']
+lib_srcs = ['core.c', 'query.c', 'crc/crc8.c']
 
 libs = []
 

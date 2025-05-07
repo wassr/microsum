@@ -1,4 +1,5 @@
-#include <microsum/macros.h>
+#include "microsum/macros.h"
+
 #include <stdlib.h>
 
 typedef struct {
