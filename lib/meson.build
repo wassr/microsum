@@ -1,4 +1,5 @@
-lib_srcs = ['core.c']
+lib_srcs = ['core.c', 'query.c']
+
 libs = []
 
 if get_option('build-static')

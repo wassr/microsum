@@ -3,6 +3,8 @@
 import sys
 from pathlib import Path
 
+HASHLEN = 8
+
 if len(sys.argv) != 2:
     exit(1)
 
@@ -18,4 +20,4 @@ commit = base / '.git' / head_ref
 with open(commit, 'r') as f:
     commit_hash = f.readline().strip()
 
-print(commit_hash, end='')
+print(commit_hash[:HASHLEN], end='')

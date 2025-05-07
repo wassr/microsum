@@ -25,4 +25,6 @@
 #define MSUM_BUILD_CC_ID  "@cc-id@"
 #define MSUM_BUILD_CC_VER "@cc-ver@"
 
-#define MSUM_INFO "libmicrosum version @version@ build with @cc-id@ (@cc-ver@) on @date@ revision @git-commit@" 
+#define MSUM_INFO         "libmicrosum version @version@ build with @cc-id@ (@cc-ver@) on @date@ revision @git-commit@" 
+
+#define MSUM_MAX_STR_SIZE 1024

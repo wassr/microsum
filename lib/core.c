@@ -8,18 +8,21 @@
 #include <microsum/config.h>
 #include <microsum/core.h>
 
+static char* version = MSUM_VER_STR;
+static char* info    = MSUM_INFO;
+
 const char* msum_version(void) {
-    return MSUM_VER_STR;
+    return version;
 }
 
-const int msum_version_minor(void) {
+int msum_version_minor(void) {
     return MSUM_VER_MAJOR;
 }
 
-const int msum_version_major(void) {
+int msum_version_major(void) {
     return MSUM_VER_MINOR;
 }
 
 const char* msum_info(void) {
-    return MSUM_INFO;
+    return info;
 }

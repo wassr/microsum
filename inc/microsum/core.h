@@ -8,9 +8,9 @@
 #pragma once
 
 #include <microsum/macros.h>
+#include <stdlib.h>
 
 MSUM_PUBLIC const char* msum_version(void);
-MSUM_PUBLIC const int   msum_version_minor(void);
-MSUM_PUBLIC const int   msum_version_major(void);
-
+MSUM_PUBLIC int         msum_version_minor(void);
+MSUM_PUBLIC int         msum_version_major(void);
 MSUM_PUBLIC const char* msum_info(void);

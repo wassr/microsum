@@ -14,4 +14,6 @@ config.set('cc-ver', cc.version())
 
 conf_gen = configure_file(input: 'config.h.in', output: 'config.h', configuration: config)
 
-includes = [conf_gen, 'core.h']
+lib_includes = [conf_gen, 'core.h', 'macros.h', 'query.h']
+
+install_headers(lib_includes, subdir: 'microsum', preserve_path: true)
