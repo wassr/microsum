@@ -30,6 +30,7 @@ IndentPPDirectives: BeforeHash
 IndentRequiresClause: false
 IndentWidth: 4
 InsertBraces: true
+InsertNewlineAtEOF: true
 KeepEmptyLines:
   AtEndOfFile: true
   AtStartOfBlock: false
