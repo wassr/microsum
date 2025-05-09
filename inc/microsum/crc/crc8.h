@@ -38,7 +38,7 @@ MSUM_PUBLIC void    msum_crc8_init(void*   state,
                                    bool    ref_out);
 MSUM_PUBLIC void    msum_crc8_update(void* state, size_t len, void* data);
 MSUM_PUBLIC void    msum_crc8_finalize(void* state, void* output);
-MSUM_PUBLIC uint8_t msum_crc8_return(void* state);
+MSUM_PUBLIC uint8_t msum_crc8_get(void* state);
 
 MSUM_PUBLIC uint8_t msum_crc8_atm(uint8_t state, size_t len, void* data);
 MSUM_PUBLIC uint8_t msum_crc8_maxim(uint8_t state, size_t len, void* data);

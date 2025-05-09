@@ -55,7 +55,7 @@ void msum_crc8_finalize(void* state_ptr, void* output_ptr) {
     *out = result ^ state->xor_out;
 }
 
-uint8_t msum_crc8_return(void* state_ptr) {
+uint8_t msum_crc8_get(void* state_ptr) {
     uint8_t result;
     msum_crc8_finalize(state_ptr, &result);
     return result;
